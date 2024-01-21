@@ -1,0 +1,91 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.TextInput {
+	height: auto;
+	border-radius: 0.5rem;
+	@include flex_col(flex-start, flex-start);
+
+	&_label {
+		position: relative;
+		font-size: 1.6rem;
+		font-weight: 400;
+		color: map-get($map: $blueGreys, $key: "subheadings");
+		z-index: 0;
+		margin-bottom: 0.3rem;
+	}
+
+	&_input {
+		padding-left: 0.5rem;
+		width: 100%;
+		min-width: 20rem;
+		height: 3.5rem;
+		border-radius: 0.5rem;
+		border: none;
+		outline: none;
+		background-color: map-get($map: $colors, $key: "mainGrey");
+		color: map-get($map: $blueGreys, $key: "headings");
+		font-size: 1.6rem;
+		font-weight: 400;
+		flex-grow: 3;
+
+		&::placeholder {
+			color: map-get($map: $blueGreyMap, $key: "300");
+			opacity: 0.6;
+		}
+
+		&:hover,
+		&:focus,
+		&:focus-within {
+			cursor: pointer;
+			-webkit-box-shadow: map-get($map: $shadows, $key: "mainOutline");
+			box-shadow: map-get($map: $shadows, $key: "mainOutline");
+		}
+		&:read-only,
+		&:disabled {
+			opacity: 0.4;
+			cursor: not-allowed;
+		}
+		&:read-only .TextInput {
+			cursor: not-allowed;
+		}
+		&:disabled .TextInput {
+			cursor: not-allowed;
+		}
+	}
+
+	&_requiredFlag {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		color: map-get($map: $colors, $key: "mainRed");
+		opacity: 0.6;
+		z-index: -1;
+	}
+}
+input[class*="TextInput_TextInput_input"]:focus-within,
+input[class^="TextInput_TextInput_input"]:focus-within {
+	cursor: pointer;
+	-webkit-box-shadow: map-get($map: $shadows, $key: "mainOutline");
+	box-shadow: map-get($map: $shadows, $key: "mainOutline");
+}
+input[class*="TextInput_TextInput_input"]:focus,
+input[class^="TextInput_TextInput_input"]:focus {
+	cursor: pointer;
+	-webkit-box-shadow: map-get($map: $shadows, $key: "mainOutline");
+	box-shadow: map-get($map: $shadows, $key: "mainOutline");
+}
+input[class*="TextInput_TextInput_input"]:hover,
+input[class^="TextInput_TextInput_input"]:hover {
+	cursor: pointer;
+	-webkit-box-shadow: map-get($map: $shadows, $key: "mainOutline");
+	box-shadow: map-get($map: $shadows, $key: "mainOutline");
+}
+input[class*="TextInput_TextInput_input"]:disabled {
+	cursor: not-allowed;
+}
+input[class*="TextInput_TextInput_input"]:read-only {
+	cursor: not-allowed;
+}

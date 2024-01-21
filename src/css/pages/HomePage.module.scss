@@ -1,0 +1,13 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.HomePage {
+	@include fill_container;
+
+	&_main {
+		width: 100%;
+		height: auto;
+		@include flex_col(center, center);
+	}
+}

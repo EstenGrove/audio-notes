@@ -1,0 +1,27 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.NoteCardAudio {
+	width: 100%;
+	height: 100%;
+	@include flex_row(center, flex-end);
+}
+
+.NoAudio {
+	width: auto;
+	@include flex_row(flex-start, center);
+
+	&_icon {
+		width: 3rem;
+		height: 3rem;
+		fill: map-get($map: $redMap, $key: "600");
+		margin-right: 0.5rem;
+	}
+	&_msg {
+		font-size: 1.7rem;
+		font-weight: 700;
+		color: map-get($map: $blueGreyMap, $key: "600");
+		// color: map-get($map: $redMap, $key: "600");
+	}
+}

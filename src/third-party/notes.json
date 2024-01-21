@@ -1,0 +1,34 @@
+{
+	"notes": {
+		"lqqusxz55yesvar8rt": {
+			"id": "lqqusxz55yesvar8rt",
+			"label": "D-Maj Guitar Riff",
+			"desc": "Basic swing riff in D-Maj",
+			"audioSrc": "SAME-AUDIO-BLOB-URL",
+			"dateCreated": "Tue Dec 26 2023 10:21:46 GMT-0700 (Mountain Standard Time)",
+			"dateEdited": "",
+			"audio": {
+				"audioSrc": "SAME-AUDIO-BLOB-URL",
+				"length": 0,
+				"duration": 0,
+				"numberOfChannels": 0,
+				"sampleRate": ""
+			}
+		},
+		"lqqut3c94j73en3mvs": {
+			"id": "lqqut3c94j73en3mvs",
+			"label": "A-minor Flamenco Riff",
+			"desc": "Spanish/Latin style flamenco guitar riff base in A-minor",
+			"audioSrc": "ANOTHER-AUDIO-BLOB-URL",
+			"dateCreated": "Tue Dec 26 2023 10:19:46 GMT-0700 (Mountain Standard Time)",
+			"dateEdited": "",
+			"audio": {
+				"audioSrc": "ANOTHER-AUDIO-BLOB-URL",
+				"length": 0,
+				"duration": 0,
+				"numberOfChannels": 0,
+				"sampleRate": ""
+			}
+		}
+	}
+}

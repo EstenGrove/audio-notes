@@ -1,0 +1,64 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+@mixin iconButton() {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-color: transparent;
+	outline: none;
+	border: 3px solid map-get($map: $redMap, $key: "500");
+	box-shadow: map-get($map: $shadows, $key: "medium");
+	@include flex_row(center, center);
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.AudioRecorder {
+	width: 100%;
+	height: auto;
+	@include flex_col(center, center);
+
+	&_inner {
+		width: 100%;
+		@include flex_row(center, center);
+	}
+	&_outer {
+		width: 100%;
+
+		&_msg {
+			font-size: 1.8rem;
+			font-weight: 600;
+			color: map-get($map: $redMap, $key: "600");
+			margin-top: 0.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.RecordButton {
+	@include iconButton();
+
+	&_icon {
+		@include flex_row(center, center);
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		fill: map-get($map: $redMap, $key: "500");
+	}
+}
+.StopButton {
+	@include iconButton();
+
+	&_icon {
+		@include flex_row(center, center);
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		fill: map-get($map: $redMap, $key: "500");
+	}
+}

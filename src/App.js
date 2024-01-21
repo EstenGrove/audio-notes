@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect,
+} from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import EditNotePage from "./pages/EditNotePage";
+import Navbar from "./components/shared/Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<div className="App">
+				<Navbar />
+				<header className="App-header">
+					<h1 className="App_header_title">Audio Notes</h1>
+				</header>
+				<main className="App_main">
+					<Switch>
+						<Route path="/notes/:id" component={EditNotePage} />
+						<Route path="/" component={HomePage} />
+					</Switch>
+				</main>
+			</div>
+		</Router>
+	);
 }
 
 export default App;

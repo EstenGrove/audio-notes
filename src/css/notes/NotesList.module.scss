@@ -1,0 +1,13 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+@import "../../sass/custom";
+
+.NotesList {
+	width: 100%;
+	height: auto;
+
+	&_list {
+		@include fill_container;
+		@include flex_row(space-evenly, center, wrap);
+	}
+}
